@@ -25,6 +25,5 @@ url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 
 ## Source
 
-[Milandr MCU 1986x Standard Peripherals Library](https://github.com/eldarkg/emdr1986x-std-per-lib)
-
+[Milandr MCU 1986x Standard Peripherals Library](https://github.com/eldarkg/emdr1986x-std-per-lib)<br>
 [Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)
