@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>Milandr</vendor>
-  <url>http://www.keil.com/pack/</url>
+  <url>https://github.com/in4lio/mdr1986x-pack-repo/raw/master/</url>
   <name>MDR1986BExx</name>
   <description>Milandr MDR1986BExx Series Device Support, Drivers and Examples</description>
 
