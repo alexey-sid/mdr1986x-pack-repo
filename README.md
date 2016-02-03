@@ -4,7 +4,9 @@ The repository for [GNU ARM Eclipse CMSIS Packs](http://gnuarmeclipse.github.io/
 
 ## Configuration
 
+```
 Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories → Add...
+```
 
 ```
 type: CMSIS Pack
