@@ -1,4 +1,4 @@
-# mdr1986x-pack-repo
+# Milandr MCU 1986x CMSIS Pack Repository
 
 The repository for [GNU ARM Eclipse CMSIS Packs](http://gnuarmeclipse.github.io/plugins/packs-manager/).
 
@@ -13,6 +13,8 @@ type: CMSIS Pack
 name: Milandr
 url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx 
 ```
+
+[The peripherals registers view](http://gnuarmeclipse.github.io/debug/peripheral-registers/)
 
 ## Contents
 
