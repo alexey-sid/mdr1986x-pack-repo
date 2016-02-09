@@ -1,6 +1,7 @@
 # Milandr MCU 1986x CMSIS Pack Repository
 
-The repository for [GNU ARM Eclipse CMSIS Packs](http://gnuarmeclipse.github.io/plugins/packs-manager/).
+The repository for [GNU ARM Eclipse CMSIS Packs](http://gnuarmeclipse.github.io/plugins/packs-manager/).<br>
+The contained package also compatible with Keil MDK 5.
 
 ## Configuration
 
