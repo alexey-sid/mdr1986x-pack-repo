@@ -19,7 +19,7 @@ url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 
 ## Contents
 
-[Milandr 32-bit АRМ Cortex-М microprocessors](http://milandr.ru/en/index.php?mact=Products,cntnt01,default,0&cntnt01hierarchyid=5&cntnt01returnid=141)
+[Milandr 32-bit АRМ Cortex-М microcontrollers](http://milandr.ru/en/index.php?mact=Products,cntnt01,default,0&cntnt01hierarchyid=5&cntnt01returnid=141)
 
 - MDR1986BE91 (MDR32F9Q1)
 - MDR1986BE92 (MDR32F9Q2)
