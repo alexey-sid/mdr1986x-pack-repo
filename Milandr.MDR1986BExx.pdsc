@@ -401,6 +401,18 @@
     <description>MDR1986BE4T device</description>
     <accept Dname="MDR1986BE4"/>
   </condition>
+  <condition id="CON_MDR1986BE1T_CMSIS">
+    <description>MDR1986BE1T Series devices and CMSIS-CORE and ARMCC compiler</description>
+    <require Tcompiler="ARMCC"/>
+    <require condition="CON_MDR1986BE1T"/>
+    <require Cclass="CMSIS" Cgroup="CORE"/>
+  </condition>
+  <condition id="CON_MDR1986BE9X_CMSIS">
+    <description>MDR1986BE9X Series devices and CMSIS-CORE and ARMCC compiler</description>
+    <require Tcompiler="ARMCC"/>
+    <require condition="CON_MDR1986BE9x"/>
+    <require Cclass="CMSIS" Cgroup="CORE"/>
+  </condition>
 </conditions>
 
   <components>
@@ -417,6 +429,8 @@
         <file category="header" name="Libraries\CMSIS\CM3\CoreSupport\core_cm3.h"/>
         <!-- header file-->
         <file category="header" name="Config\MDR32F9Qx_config.h"/>
+        <!-- device configuration required by drivers at the moment -->
+        <file category="header" name="CMSIS_Driver\MDR1986VE9X\Config\RTE_Device.h" attr="config" version="1.00"/>
       </files>
     </component>
 
@@ -434,6 +448,8 @@
         <!-- system file -->
         <!-- header file-->
         <file category="header" name="Config\MDR32F9Qx_config.h"/>
+        <!-- device configuration required by drivers at the moment -->
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\Config\RTE_Device.h" attr="config" version="1.00"/>
       </files>
     </component>
 
@@ -849,5 +865,93 @@
       </files>
     </component>
 
+    <!-- CMSIS SPI Driver -->
+    <component Cclass="CMSIS Driver" Cgroup="SPI" Capiversion="2.01" Cversion="1.00" condition="CON_MDR1986BE1T_CMSIS">
+      <description>CMSIS SPI Driver for MDR1986BE1T</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define CMSIS_Drivers_SPI0                /* Driver SPI0 */
+        #define CMSIS_Drivers_SPI1                /* Driver SPI1 */
+      </RTE_Components_h>
+      <files>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_SPI.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_SPI.c"/>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.c"/>
+      </files>
+    </component>
+    <component Cclass="CMSIS Driver" Cgroup="SPI" Capiversion="2.01" Cversion="1.00" condition="CON_MDR1986BE9X_CMSIS">
+      <description>CMSIS SPI Driver for MDR1986BE9X</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define CMSIS_Drivers_SPI0                /* Driver SPI0 */
+        #define CMSIS_Drivers_SPI1                /* Driver SPI1 */
+      </RTE_Components_h>
+      <files>
+        <file category="header" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_SPI.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_SPI.c"/>
+        <file category="header" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_PORT.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_PORT.c"/>
+      </files>
+    </component>
+
+    <!-- CMSIS USART Driver -->
+    <component Cclass="CMSIS Driver" Cgroup="USART" Capiversion="2.01" Cversion="1.00" condition="CON_MDR1986BE1T_CMSIS">
+      <description>CMSIS USART Driver for MDR1986BE1T</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define CMSIS_Drivers_USART0              /* Driver USART0 */
+        #define CMSIS_Drivers_USART1              /* Driver USART1 */
+      </RTE_Components_h>
+      <files>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_USART.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_USART.c"/>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.c"/>
+      </files>
+    </component>
+    <component Cclass="CMSIS Driver" Cgroup="USART" Capiversion="2.01" Cversion="1.00" condition="CON_MDR1986BE9X_CMSIS">
+      <description>CMSIS USART Driver for MDR1986BE9X</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define CMSIS_Drivers_USART0              /* Driver USART0 */
+        #define CMSIS_Drivers_USART1              /* Driver USART1 */
+      </RTE_Components_h>
+      <files>
+        <file category="header" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_USART.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_USART.c"/>
+        <file category="header" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_PORT.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE9X\MDR1986VE9X_PORT.c"/>
+      </files>
+    </component>
+
+    <!-- CMSIS Ethernet PHY Driver -->
+    <component Cclass="CMSIS Driver" Cgroup="Ethernet PHY" Capiversion="2.01" Cversion="1.00" condition="CON_MDR1986BE1T_CMSIS">
+      <description>CMSIS Ethernet PHY Driver for MDR1986BE1T</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define CMSIS_Drivers_ETH_PHY0            /* Driver ETH_PHY0 */
+      </RTE_Components_h>
+      <files>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_ETH_PHY.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_ETH_PHY.c"/>
+      </files>
+    </component>
+
+    <!-- CMSIS Ethernet MAC Driver -->
+    <component Cclass="CMSIS Driver" Cgroup="Ethernet MAC" Capiversion="2.01" Cversion="1.00" condition="CON_MDR1986BE1T_CMSIS">
+      <description>CMSIS Ethernet MAC Driver for MDR1986BE1T</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define CMSIS_Drivers_ETH_MAC0            /* Driver ETH_MAC0 */
+      </RTE_Components_h>
+      <files>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_ETH_MAC.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_ETH_MAC.c"/>
+        <file category="header" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.h"/>
+        <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.c"/>
+      </files>
+    </component>
+    
   </components>
 </package>
