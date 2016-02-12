@@ -11,10 +11,12 @@ Revision:    V1.0
 
 [Milandr 32-bit АRМ Cortex-М microcontrollers](http://milandr.ru/index.php?mact=Products,cntnt01,default,0&cntnt01hierarchyid=6&cntnt01returnid=67)
 
-- MDR1986BE91 (MDR32F9Q1) : SPI, UART
-- MDR1986BE92 (MDR32F9Q2) : SPI, UART
-- MDR1986BE93 (MDR32F9Q3) : SPI, UART
-- MDR1986BE1T : SPI, UART, Ethernet
+```
+MDR1986BE91 (MDR32F9Q1): SPI, UART
+MDR1986BE92 (MDR32F9Q2): SPI, UART
+MDR1986BE93 (MDR32F9Q3): SPI, UART
+MDR1986BE1T:             SPI, UART, Ethernet
+```
 
 ## License
 
