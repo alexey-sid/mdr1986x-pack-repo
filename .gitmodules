@@ -4,3 +4,6 @@
 [submodule "source/emdr1986x-std-per-lib-doc"]
 	path = source/emdr1986x-std-per-lib-doc
 	url = https://github.com/eldarkg/emdr1986x-std-per-lib-doc.git
+[submodule "source/mdr1986x-JFlash"]
+	path = source/mdr1986x-JFlash
+	url = https://github.com/in4lio/mdr1986x-JFlash.git
