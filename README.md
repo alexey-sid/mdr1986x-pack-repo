@@ -35,6 +35,6 @@ url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 - [Milandr MCU 1986BExx CMSIS Driver](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/CMSIS_Driver)
 - [Milandr MCU 1986x flashing with J-Link](https://github.com/in4lio/mdr1986x-JFlash)
 
-## How to build package
+## How to rebuild package
 
-Just run the `build.py` script.
+Just run `build.py` script.
