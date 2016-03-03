@@ -30,11 +30,11 @@ url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 
 ## Source list
 
-[Milandr MCU 1986x Standard Peripherals Library](https://github.com/eldarkg/emdr1986x-std-per-lib)<br>
-[Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)<br>
-[Milandr MCU 1986BExx CMSIS Driver](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/CMSIS_Driver)<br>
-[Milandr MCU 1986x flashing with J-Link](https://github.com/in4lio/mdr1986x-JFlash)
+- [Milandr MCU 1986x Standard Peripherals Library](https://github.com/eldarkg/emdr1986x-std-per-lib)
+- [Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)
+- [Milandr MCU 1986BExx CMSIS Driver](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/CMSIS_Driver)
+- [Milandr MCU 1986x flashing with J-Link](https://github.com/in4lio/mdr1986x-JFlash)
 
 ## How to build package
 
-Just run `build.py` script.
+Just run the `build.py` script.
