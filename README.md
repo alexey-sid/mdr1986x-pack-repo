@@ -12,7 +12,7 @@ Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories 
 ```
 type: CMSIS Pack
 name: Milandr
-url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx 
+url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 ```
 
 [The peripherals registers view](http://gnuarmeclipse.github.io/debug/peripheral-registers/)
@@ -28,10 +28,12 @@ url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 - MDR1986BE3T
 - MDR1986BE4
 
-## Source
+## Source list
 
 [Milandr MCU 1986x Standard Peripherals Library](https://github.com/eldarkg/emdr1986x-std-per-lib)<br>
-[Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)
+[Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)<br>
+[Milandr MCU 1986x CMSIS Driver](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/CMSIS_Driver)<br>
+[Milandr MCU 1986x flashing with J-Link](https://github.com/in4lio/mdr1986x-JFlash)
 
 Format: MDK5 Software Pack
 
@@ -47,11 +49,11 @@ Structure of Milandr.MDR1986BExx.0.0.0.pack (zipped)
     keil\                         <--  ...
                                    X     iar_arm\
                                    X     Phyton_CodeMaster\
-	
-  Libraries\                      
+
+  Libraries\
     CMSIS\                        <--  emdr1986x-std-per-lib
     MDR32F9Qx_StdPeriph_Driver\   <--  ...
     MDR1986BE4_StdPeriph_Driver\  <--  ...
-	
+
   Milandr.MDR1986BExx.pdsc        <--  mdr1986x-pack-repo
 ```
