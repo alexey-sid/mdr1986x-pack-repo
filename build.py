@@ -57,6 +57,8 @@ pack = PACK_TEMPL % ver
 if os.path.exists( pack ):
     print 'Backup', pack
     bak = pack + '.bak'
+    if os.path.exists( bak ):
+        os.remove( bak )
     move_file( pack, bak )
 
 print 'Copy'

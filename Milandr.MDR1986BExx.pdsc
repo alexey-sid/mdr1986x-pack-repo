@@ -6,6 +6,9 @@
   <description>Milandr MDR1986BExx Series Device Support, Drivers and Examples</description>
 
   <releases>
+    <release version="1.4.2">
+      03/14/2016, Updated Standard Peripherals Library, added JFlash, added CMSIS Driver
+    </release>
     <release version="1.4.1">
       02/08/2016, Initial release, based on https://github.com/eldarkg/emdr1986x-std-per-lib and https://github.com/eldarkg/emdr1986x-std-per-lib-doc
     </release>
@@ -952,6 +955,6 @@
         <file category="source" name="CMSIS_Driver\MDR1986VE1T\MDR1986VE1T_PORT.c"/>
       </files>
     </component>
-    
+
   </components>
 </package>
