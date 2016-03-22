@@ -18,6 +18,7 @@ SOURCE_DIR = './source/'
 BUILD_DIR  = './build/'
 PDSC_FILE  = './Milandr.MDR1986BExx.pdsc'
 PACK_TEMPL = './Milandr.MDR1986BExx.%s.pack'
+IDX_FILE   = './Milandr.idx'
 
 copylist = (
     ( 'emdr1986x-std-per-lib/CMSIS/'                      , 'Libraries/CMSIS/' ),
@@ -95,6 +96,12 @@ for op in dellist:
 print 'Zip to', pack
 shutil.make_archive( pack, format='zip', root_dir=BUILD_DIR )
 move_file( pack + '.zip', pack )
+
+print 'Write version to', IDX_FILE
+idx = minidom.parse( IDX_FILE )
+idx.getElementsByTagName( 'pdsc' )[ 0 ].attributes[ 'version' ].value = ver
+print idx.toxml()
+idx.writexml( open( IDX_FILE, "wb" ))
 
 open( os.path.join( BUILD_DIR, '.gitignore' ), 'w' ).write( '*' )
 print 'Done'
