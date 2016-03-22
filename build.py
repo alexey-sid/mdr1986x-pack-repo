@@ -101,7 +101,7 @@ print 'Write version to', IDX_FILE
 idx = minidom.parse( IDX_FILE )
 idx.getElementsByTagName( 'pdsc' )[ 0 ].attributes[ 'version' ].value = ver
 print idx.toxml()
-idx.writexml( open( IDX_FILE, "wb" ))
+idx.writexml( open( IDX_FILE, "wb" ), newl="\n" )
 
 open( os.path.join( BUILD_DIR, '.gitignore' ), 'w' ).write( '*' )
 print 'Done'
