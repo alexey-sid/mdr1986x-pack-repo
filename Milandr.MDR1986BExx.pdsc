@@ -7,7 +7,7 @@
 
   <releases>
     <release version="1.4.2">
-      06/06/2016, Updated Standard Peripherals Library
+      09/06/2016, Actual Standard Peripherals Library
       03/14/2016, Updated Standard Peripherals Library, added JFlash, added CMSIS Driver
     </release>
     <release version="1.4.1">
