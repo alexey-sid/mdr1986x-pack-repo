@@ -164,7 +164,7 @@ void SystemInit (void)
   /* Reset ADC_MCO_CLOCK bits */
   MDR_RST_CLK->ADC_MCO_CLOCK   &= (uint32_t)0x00000000;
 
-#if defined( __GNUC__ )
+#if defined ( __GNUC__ )
   /* Call user defined function of system initialization */
   _SystemInit();
 #endif
