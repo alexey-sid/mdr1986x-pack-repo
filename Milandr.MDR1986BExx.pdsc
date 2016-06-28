@@ -7,8 +7,8 @@
 
   <releases>
     <release version="1.4.2">
+      06/28/2016, Actual Standard Peripherals Library
       06/27/2016, Actual JFlash
-      06/09/2016, Actual Standard Peripherals Library
     </release>
     <release version="1.4.1">
       02/08/2016, Initial release, based on https://github.com/eldarkg/emdr1986x-std-per-lib and https://github.com/eldarkg/emdr1986x-std-per-lib-doc
