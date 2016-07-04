@@ -169,8 +169,6 @@ void SystemInit (void)
   _SystemInit();
 #endif
 
-  /*FIXME: Useless call in case of ARM CC, variable SystemCoreClock will be
-           initialized with default value after SystemInit() */
   SystemCoreClockUpdate();
 }
 
