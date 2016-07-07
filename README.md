@@ -1,6 +1,6 @@
 # Milandr MCU 1986x CMSIS Pack Repository
 
-The unofficial repository for [GNU ARM Eclipse CMSIS Packs](http://gnuarmeclipse.github.io/plugins/packs-manager/).<br>
+The unofficial repository for [GNU ARM Eclipse](http://gnuarmeclipse.github.io/plugins/packs-manager/).<br>
 The contained package also compatible with Keil MDK 5.
 
 ## Configuration
@@ -37,4 +37,4 @@ url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 
 ## How to rebuild package
 
-Just run `build.py` script.
+Just update submodules and run `build.py` script.
