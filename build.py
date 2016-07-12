@@ -41,6 +41,7 @@ copylist = (
 dellist = (
     'IDE/keil/SFD/MDR1901VC1T.SFR',
     'IDE/keil/SFD/MDR1901VC1T.svd',
+    'JFlash/.git',
 )
 
 print 'Clean build'
