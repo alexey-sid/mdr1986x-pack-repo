@@ -26,12 +26,10 @@ and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install
 
 [Milandr 32-bit АRМ Cortex-М microcontrollers](http://milandr.ru/en/index.php?mact=Products,cntnt01,default,0&cntnt01hierarchyid=5&cntnt01returnid=141)
 
-- MDR1986BE91 (MDR32F9Q1)
-- MDR1986BE92 (MDR32F9Q2)
-- MDR1986BE93 (MDR32F9Q3)
-- MDR1986BE1T
-- MDR1986BE3T
-- MDR1986BE4
+- 1986BE9x (MDR32F9Qx)
+- 1986BE1 (MDR32F1)
+- 1986BE3
+- 1986BE4
 
 #### The package source list
 
