@@ -40,4 +40,4 @@ and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install
 
 #### How to rebuild the package
 
-Just update submodules and run `build.py` script.
+Just update submodules `git submodule foreach git pull origin master` and run `build.py` script.
