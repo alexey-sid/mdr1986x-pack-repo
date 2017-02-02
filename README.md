@@ -40,4 +40,16 @@ and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install
 
 #### How to rebuild the package
 
-Just update submodules `git submodule foreach git pull origin master` and run `build.py` script.
+- Clone this repository:
+
+```
+git clone https://github.com/in4lio/mdr1986x-pack-repo.git
+```
+
+- Update submodules:
+
+```
+git submodule foreach git pull origin master
+```
+
+- Run `build.py` script.
