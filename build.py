@@ -27,7 +27,7 @@ copylist = (
     ( 'emdr1986x-std-per-lib/README.md'                   , 'Libraries/' ),
     ( 'emdr1986x-std-per-lib/Config/'                     , 'Config/' ),
 
-    ( 'diff/emdr1986x-std-per-lib/'                       , 'Libraries/' ),
+#    ( 'diff/emdr1986x-std-per-lib/'                       , 'Libraries/' ),
 
     ( 'emdr1986x-std-per-lib-doc/Example_Projects/'       , 'Example_Projects/' ),
     ( 'emdr1986x-std-per-lib-doc/Examples/'               , 'Examples/' ),
