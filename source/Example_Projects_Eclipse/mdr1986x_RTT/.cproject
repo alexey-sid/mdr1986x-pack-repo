@@ -6,7 +6,6 @@
 				<macros>
 					<stringMacro name="stack_size" type="VALUE_TEXT" value="0x1000"/>
 					<stringMacro name="heap_size" type="VALUE_TEXT" value="0x0100"/>
-					<stringMacro name="CMSIS_LOC" type="VALUE_TEXT" value="C:\dev\eclipse-tk\Packages\Milandr\MDR1986BExx\1.4.2\Libraries\CMSIS"/>
 				</macros>
 				<externalSettings/>
 				<extensions>
@@ -486,7 +485,6 @@
 				<macros>
 					<stringMacro name="stack_size" type="VALUE_TEXT" value="0x1000"/>
 					<stringMacro name="heap_size" type="VALUE_TEXT" value="0x0100"/>
-					<stringMacro name="CMSIS_LOC" type="VALUE_TEXT" value="C:\dev\eclipse-tk\Packages\Milandr\MDR1986BExx\1.4.2\Libraries\CMSIS"/>
 				</macros>
 				<externalSettings/>
 				<extensions>
@@ -740,5 +738,19 @@
 		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1533162336.25881560;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1533162336.25881560.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1391541617;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.61648467">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="BE3">
+			<resource resourceType="PROJECT" workspacePath="/mdr1986x_RTT"/>
+		</configuration>
+		<configuration configurationName="BE9x">
+			<resource resourceType="PROJECT" workspacePath="/mdr1986x_RTT"/>
+		</configuration>
+		<configuration configurationName="BE1">
+			<resource resourceType="PROJECT" workspacePath="/mdr1986x_RTT"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="mdr1986x_RTT.null.1301148952" name="mdr1986x_RTT"/>
 	</storageModule>
 </cproject>
