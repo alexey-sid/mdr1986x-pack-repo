@@ -36,12 +36,14 @@ copylist = (
 
     ( 'CMSIS_Driver/'                                     , 'CMSIS_Driver/' ),
     ( 'mdr1986x-JFlash/'                                  , 'JFlash/' ),
+    ( 'Example_Projects_Eclipse/'                         , 'Example_Projects_Eclipse/' ),
 )
 
 dellist = (
     'IDE/keil/SFD/MDR1901VC1T.SFR',
     'IDE/keil/SFD/MDR1901VC1T.svd',
     'JFlash/.git',
+    '@Example_Projects_Eclipse/mdr1986x_RTT/.gitignore',
 )
 
 print 'Clean build'
@@ -87,12 +89,23 @@ for op in copylist:
 
 print 'Remove'
 for op in dellist:
-    f = os.path.join( BUILD_DIR, op )
-    print ' ', f
-    if os.path.isdir( f ):
-        remove_tree( f )
+    if op.startswith( '@' ):
+        f = os.path.join( BUILD_DIR, op[ 1: ])
+        d = os.path.dirname( f )
+        try:
+            sublist = [ os.path.join( d, x[ 1: ]) if x.startswith( '/' ) else os.path.join( d, x ) for x in open( f ).read().splitlines()]
+        except IOError:
+            sublist = []
+            print '*** ERROR *** Failed to get a removal list from "%s".' % ( f )
+            print
     else:
-        os.remove( f )
+        sublist = [ os.path.join( BUILD_DIR, op )]
+    for f in sublist:
+        print ' ', f
+        if os.path.isdir( f ):
+            remove_tree( f )
+        else:
+            os.remove( f )
 
 print 'Zip to', pack
 shutil.make_archive( pack, format='zip', root_dir=BUILD_DIR )
