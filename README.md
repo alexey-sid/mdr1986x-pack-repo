@@ -37,7 +37,7 @@ and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install
 - [Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)
 - [Milandr MCU 1986BExx CMSIS Driver](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/CMSIS_Driver)
 - [Milandr MCU 1986x flashing with J-Link](https://github.com/in4lio/mdr1986x-JFlash)
-- [Example GNU ARM Eclipse Projects](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/Example_Projects_Eclipse)
+- [Example Projects for GNU ARM Eclipse](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/Example_Projects_Eclipse)
 
 #### How to rebuild the package
 
