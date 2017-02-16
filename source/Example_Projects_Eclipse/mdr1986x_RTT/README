@@ -6,12 +6,16 @@
     ___             ______________________________
     ___ WHAT IS IT? ______________________________
 
-    An example project of using SEGGER Real Time Transfer (RTT) with
+    An example Eclipse project of using SEGGER Real Time Transfer (RTT) with
     the following microcontrollers of Milandr 1986x series:
 
         1986BE9x (MDR32F9Qx)
         1986BE1  (MDR32F1)
         1986BE3  (MDR32F3)
+
+    In case of 1986BE1 and 1986BE3, shared access to RTT buffer is operating
+    correctly only if EEPROM Read Delay (EEPROM_CMD_DELAY) equals to zero,
+    for this reason, Core Clock Frequency is limited to 25 MHz.
 
     ___       ____________________________________
     ___ F A Q ____________________________________
@@ -21,7 +25,7 @@
     Menu → Run → External Tools → RTT
     or Toolbar → External Tools → RTT
     for the first time choose: External Tools Configuration...
-    
+
     If you're under debugging session:
     Menu → Run → External Tools → Telnet
     or Toolbar → External Tools → Telnet
@@ -55,7 +59,7 @@
 
     GNU ARM Eclipse Windows Build Tools
     2.8-201611221915
-    https://github.com/gnuarmeclipse/windows-build-tools/releases
+    https://github.com/gnuarmeclipse/windows-build-tools/releases/
 
     GNU ARM Eclipse Plug-ins
     3.2.1-201701141320
@@ -70,11 +74,10 @@
     Milandr MCU 1986x CMSIS Pack
     1.4.2
     20170215-0001
-    https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
+    https://github.com/in4lio/mdr1986x-pack-repo/
 
     ___           ________________________________
     ___ READ MORE ________________________________
 
     http://gnuarmeclipse.github.io/install/
-    https://github.com/in4lio/mdr1986x-pack-repo/
     https://github.com/in4lio/mdr1986x-JFlash/
