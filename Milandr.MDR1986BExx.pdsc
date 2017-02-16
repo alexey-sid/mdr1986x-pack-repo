@@ -7,11 +7,10 @@
 
   <releases>
     <release version="1.4.2">
-      11/01/2016, Actual Standard Peripherals Library
-      11/01/2016, Actual JFlash
+      20170215-0001, Added mdr1986x_RTT example
     </release>
     <release version="1.4.1">
-      02/08/2016, Initial release, based on https://github.com/eldarkg/emdr1986x-std-per-lib and https://github.com/eldarkg/emdr1986x-std-per-lib-doc
+      20160208-0000, Initial release, based on https://github.com/eldarkg/emdr1986x-std-per-lib and https://github.com/eldarkg/emdr1986x-std-per-lib-doc
     </release>
   </releases>
 
