@@ -39,6 +39,7 @@ copylist = (
     ( 'Example_Projects_Eclipse/'                         , 'Example_Projects_Eclipse/' ),
 )
 
+#  @ - remove according to the list of files
 dellist = (
     'IDE/keil/SFD/MDR1901VC1T.SFR',
     'IDE/keil/SFD/MDR1901VC1T.svd',
