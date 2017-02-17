@@ -56,7 +56,7 @@
 *                                                                    *
 **********************************************************************
 --------- END-OF-HEADER --------------------------------------------
-File    : main.c = Main_RTT_PrintfTest.c + Main_RTT_InputEchoApp.c + LED
+File: main.c = Main_RTT_PrintfTest.c + Main_RTT_InputEchoApp.c + LED
 */
 
 #include <stdio.h>
@@ -71,6 +71,7 @@ static char r;
 #include "MDR32F9Qx_rst_clk.h"
 #include "MDR32F9Qx_port.h"
 
+/* LED settings */
 #if defined (USE_MDR1986VE9x)
   #define LED_PORT       MDR_PORTB
   #define LED_PORT_PCLK  RST_CLK_PCLK_PORTB
@@ -105,6 +106,7 @@ void main(void) {
   /* Light up LED */
   PORT_SetBits(LED_PORT, LED_PIN);
 
+  /* Main_RTT_PrintfTest.c */
   SEGGER_RTT_ConfigUpBuffer(0, NULL, NULL, 0, SEGGER_RTT_MODE_BLOCK_IF_FIFO_FULL);
 
   SEGGER_RTT_WriteString(0, "SEGGER Real-Time-Terminal Sample\r\n\r\n");
@@ -186,10 +188,11 @@ void main(void) {
 
   SEGGER_RTT_printf(0, "printf Test: %%p,      &_Cnt      : %p.\r\n", &_Cnt);
 
-  SEGGER_RTT_WriteString(0, "###### SEGGER_printf() Tests done. ######\r\n");
+  SEGGER_RTT_WriteString(0, "###### SEGGER_printf() Tests done. ######\r\n\r\n");
 
-  SEGGER_RTT_printf(0, "\r\nCPU CLOCK = %d MHz\r\n\r\n", SystemCoreClock/1000000);
+  SEGGER_RTT_printf(0, "CPU CLOCK = %d MHz\r\n\r\n", SystemCoreClock/1000000);
 
+  /* Main_RTT_InputEchoApp.c */
   SEGGER_RTT_WriteString(0, "###### Testing SEGGER_RTT_WaitKey() ######\r\n");
   do {
     r = SEGGER_RTT_WaitKey();
