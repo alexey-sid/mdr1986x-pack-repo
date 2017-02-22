@@ -7,7 +7,7 @@
 
   <releases>
     <release version="1.4.2">
-      20170215-0001, Added mdr1986x_RTT example
+      20170222-0002, Updated mdr1986x-JFlash
     </release>
     <release version="1.4.1">
       20160208-0000, Initial release, based on https://github.com/eldarkg/emdr1986x-std-per-lib and https://github.com/eldarkg/emdr1986x-std-per-lib-doc
