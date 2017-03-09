@@ -12,11 +12,21 @@ Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories 
 
 type: CMSIS Pack
 name: Milandr
-url : https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
+url:  https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
 ```
 
 - [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) Packs perspective
 and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install) `Milandr.MDR1986BExx` package.
+
+- The path to packages is defined in `packs_path` macro, but for the plug-in version that I use,
+this macro isn't visible from tools configurations. Therefore, you may need to set `packs_path` macro manually,
+here:
+```
+Eclipse Menu → Window → Preferences → Run/Debug → String Substitution → New...
+
+variable: packs_path
+value: <path to packages>
+```
 
 #### How to examine/modify the peripheral registers (Eclipse)
 
