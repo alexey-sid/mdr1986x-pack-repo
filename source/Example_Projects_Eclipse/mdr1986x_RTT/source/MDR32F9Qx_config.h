@@ -132,32 +132,32 @@
 
 #if defined (_USE_DEBUG_UART_)
 
-#define DEBUG_BAUD_RATE					115200
+#define DEBUG_BAUD_RATE                 115200
 
 #if defined (USE_MDR1986VE3)
-	#define DEBUG_UART					MDR_UART1
-	#define DEBUG_UART_PORT				MDR_PORTD
-	#define DEBUG_UART_TX_PIN			PORT_Pin_13
-	#define DEBUG_UART_RX_PIN			PORT_Pin_14
-	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_MAIN
+    #define DEBUG_UART                  MDR_UART1
+    #define DEBUG_UART_PORT             MDR_PORTC
+    #define DEBUG_UART_TX_PIN           PORT_Pin_3
+    #define DEBUG_UART_RX_PIN           PORT_Pin_4
+    #define DEBUG_UART_PINS_FUNCTION    PORT_FUNC_MAIN
 #elif defined (USE_MDR1986VE1T)
-	#define DEBUG_UART 					MDR_UART1
-	#define DEBUG_UART_PORT				MDR_PORTC
-	#define DEBUG_UART_TX_PIN			PORT_Pin_3
-	#define DEBUG_UART_RX_PIN			PORT_Pin_4
-	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_MAIN
+    #define DEBUG_UART                  MDR_UART1
+    #define DEBUG_UART_PORT             MDR_PORTC
+    #define DEBUG_UART_TX_PIN           PORT_Pin_3
+    #define DEBUG_UART_RX_PIN           PORT_Pin_4
+    #define DEBUG_UART_PINS_FUNCTION    PORT_FUNC_MAIN
 #elif defined (USE_MDR1986VE9x)
-	#define DEBUG_UART 					MDR_UART2
-	#define DEBUG_UART_PORT				MDR_PORTF
-	#define DEBUG_UART_TX_PIN			PORT_Pin_1
-	#define DEBUG_UART_RX_PIN			PORT_Pin_0
-	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_OVERRID
+    #define DEBUG_UART                  MDR_UART2
+    #define DEBUG_UART_PORT             MDR_PORTF
+    #define DEBUG_UART_TX_PIN           PORT_Pin_1
+    #define DEBUG_UART_RX_PIN           PORT_Pin_0
+    #define DEBUG_UART_PINS_FUNCTION    PORT_FUNC_OVERRID
 #elif defined (USE_MDR1901VC1T)
-	#define DEBUG_UART					MDR_UART3
-	#define DEBUG_UART_PORT				MDR_PORTF
-	#define DEBUG_UART_TX_PIN			PORT_Pin_1
-	#define DEBUG_UART_RX_PIN			PORT_Pin_0
-	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_ALTER
+    #define DEBUG_UART                  MDR_UART3
+    #define DEBUG_UART_PORT             MDR_PORTF
+    #define DEBUG_UART_TX_PIN           PORT_Pin_1
+    #define DEBUG_UART_RX_PIN           PORT_Pin_0
+    #define DEBUG_UART_PINS_FUNCTION    PORT_FUNC_ALTER
 #endif
 
 //#define PRINTF_FORMAT_FULL
@@ -243,13 +243,13 @@
   * @retval None
   */
 #if (USE_ASSERT_INFO == 0)
-	#define assert_param(expr) ((void)0)
+    #define assert_param(expr) ((void)0)
 #elif (USE_ASSERT_INFO == 1)
-	#define assert_param(expr) ((expr) ? (void)0 : assert_failed(ASSERT_INFO_FILE_ID, __LINE__))
-	void assert_failed(uint32_t file_id, uint32_t line);
+    #define assert_param(expr) ((expr) ? (void)0 : assert_failed(ASSERT_INFO_FILE_ID, __LINE__))
+    void assert_failed(uint32_t file_id, uint32_t line);
 #elif (USE_ASSERT_INFO == 2)
-	#define assert_param(expr) ((expr) ? (void)0 : assert_failed(ASSERT_INFO_FILE_ID, __LINE__, #expr))
-	void assert_failed(uint32_t file_id, uint32_t line, const uint8_t* expr);
+    #define assert_param(expr) ((expr) ? (void)0 : assert_failed(ASSERT_INFO_FILE_ID, __LINE__, #expr))
+    void assert_failed(uint32_t file_id, uint32_t line, const uint8_t* expr);
 #else
     #error "Unsupported USE_ASSERT_INFO level"
 #endif /* USE_ASSERT_INFO */

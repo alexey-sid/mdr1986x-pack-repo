@@ -10,8 +10,8 @@
     the following microcontrollers of Milandr 1986x series:
 
         1986BE9x (MDR32F9Qx)
-        1986BE1  (MDR32F1)
-        1986BE3  (MDR32F3)
+        1986BE1 (MDR32F1)
+        1986BE3
 
     In case of 1986BE1 and 1986BE3, shared access to RTT buffer is operating
     correctly only if EEPROM Read Delay (EEPROM_CMD_DELAY) equals to zero,

@@ -6,7 +6,6 @@ The contained package also compatible with Keil MDK 5.
 #### How to install the package (Eclipse)
 
 - [Add](http://gnuarmeclipse.github.io/plugins/packs-manager/#configuration) Milandr MCU repository:
-
 ```
 Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories → Add...
 
