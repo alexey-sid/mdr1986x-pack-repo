@@ -15,12 +15,14 @@
 #include "ethernet.h"
 #include "lan.h"
 
-#define MAC_ADDR_1     MAC_ADDR( 0x55, 0x78, 0x51, 0x65, 0x30, 0x21 )
-#define IP_ADDR_1      IP_ADDR( 192, 168, 1, 100 )
-#define SUBNET_MASK_1  IP_ADDR( 255, 255, 127, 0 )
+/* eth1 */
+#define MAC_ADDR_1     MAC_ADDR( 0xD0, 0xEE, 0xF1, 0xF2, 0xEE, 0xE2 )
+#define IP_ADDR_1      IP_ADDR( 192, 168, 1, 88 )
+#define SUBNET_MASK_1  IP_ADDR( 255, 255, 255, 0 )
 
-#define MAC_ADDR_2     MAC_ADDR( 0xE1, 0xA2, 0x21, 0x85, 0x31, 0x25 )
-#define IP_ADDR_2      IP_ADDR( 192, 168, 1, 101 )
+/* eth2 */
+#define MAC_ADDR_2     MAC_ADDR( 0x52, 0x6F, 0x73, 0x74, 0x6F, 0x76 )
+#define IP_ADDR_2      IP_ADDR( 192, 168, 1, 89 )
 #define SUBNET_MASK_2  IP_ADDR( 255, 255, 255, 0 )
 
 #define UDP_PORT       18333
