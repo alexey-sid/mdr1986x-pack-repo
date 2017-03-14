@@ -9,8 +9,8 @@
     An implementation of UDP, ARP and ICMP (ping only) for MCU 1986BE3
     (rev. 1436 or later) using FIFO mode of Ethernet controller.
 
-    The example demonstrates an exchange of UDP datagrams between Ethernet
-    interfaces, as well as a response to ping.
+    The example Eclipse project demonstrates an exchange of UDP datagrams
+    between Ethernet interfaces, as well as a response to ping.
 
     ___       ____________________________________
     ___ F A Q ____________________________________
