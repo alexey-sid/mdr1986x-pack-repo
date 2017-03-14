@@ -25,7 +25,8 @@
 #define IP_ADDR_2      IP_ADDR( 192, 168, 1, 89 )
 #define SUBNET_MASK_2  IP_ADDR( 255, 255, 255, 0 )
 
-#define UDP_PORT       18333
+#define UDP_S_PORT     18332  /* Sender port */
+#define UDP_T_PORT     18333  /* Target port */
 
 static const ip_addr_t IP_ADDR[ eth__COUNT_ ] = { IP_ADDR_1, IP_ADDR_2 };
 
@@ -103,14 +104,14 @@ int main( void )
 		/* Send payload using UDP datagrams */
 		if ( timer1_flag ) {  /* ... every 100 ms */
 			if ( lan_able_transmit( eth1 )) {
-				udp_transmit( eth1, UDP_PORT, UDP_PORT, IP_ADDR_2, ( void *) payload[ eth1 ], PAYLOAD_SIZE );
+				udp_transmit( eth1, UDP_S_PORT, UDP_T_PORT, IP_ADDR_2, ( void *) payload[ eth1 ], PAYLOAD_SIZE );
 				if ( lan_errno == LAN_ERR_NONE ) {
 					++tx_count[ eth1 ];
 					++payload[ eth1 ][ 0 ];  /* Increment of packet number */
 				}
 			}
 			if ( lan_able_transmit( eth2 )) {
-				udp_transmit( eth2, UDP_PORT, UDP_PORT, IP_ADDR_1, ( void *) payload[ eth2 ], PAYLOAD_SIZE );
+				udp_transmit( eth2, UDP_S_PORT, UDP_T_PORT, IP_ADDR_1, ( void *) payload[ eth2 ], PAYLOAD_SIZE );
 				if ( lan_errno == LAN_ERR_NONE ) {
 					++tx_count[ eth2 ];
 					++payload[ eth2 ][ 0 ];  /* Increment of packet number */
@@ -135,18 +136,18 @@ void udp_handle_data( int ifc, uint16_t s_port, uint16_t t_port, ip_addr_t s_ip,
 	uint32_t packno;
 	int s_ifc = ( ifc == eth1 ) ? eth2 : eth1;  /* Sender interface */
 
+	if ( t_port != UDP_T_PORT ) return;
+
 	/* Check payload size */
 	if ( sz != PAYLOAD_SIZE ) {
-		if ( t_port == UDP_PORT ) {
-			++err_count[ ifc ];
-			printf( "%s: TEST ERROR: Wrong size of payload (%u).\n", ETHS[ ifc ], sz );
-		}
+		++err_count[ ifc ];
+		printf( "%s: TEST ERROR: Wrong size of payload (%u).\n", ETHS[ ifc ], sz );
 		return;
 	}
 	/* Check ports */
-	if (( s_port != UDP_PORT ) || ( t_port != UDP_PORT )) {
+	if ( s_port != UDP_S_PORT ) {
 		++err_count[ ifc ];
-		printf( "%s: TEST ERROR: Wrong port, s_port = %u, t_port = %u.\n", ETHS[ ifc ], s_port, t_port );
+		printf( "%s: TEST ERROR: Wrong sender port (%u).\n", ETHS[ ifc ], s_port );
 	}
 	/* Check sender IP address */
 	if ( s_ip != IP_ADDR[ s_ifc ]) {
