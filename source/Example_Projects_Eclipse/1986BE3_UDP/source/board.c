@@ -104,9 +104,9 @@ void Timer1_IRQHandler()
 	static int t = 0;
 
 	MDR_TIMER1->STATUS = 0;
-	if(++t == 50){
+	if(++t == 5){
 		PORT_ResetBits(LED_PORT, LED_PIN);
-	}else if(t == 100){
+	}else if(t == 10){
 		t = 0;
 		timer1_flag = 1;
 		PORT_SetBits(LED_PORT, LED_PIN);
