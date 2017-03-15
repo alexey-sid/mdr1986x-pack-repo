@@ -12,8 +12,9 @@
 #ifndef LAN_H
 #define LAN_H
 
-#include <inttypes.h>
+#include <stdint.h>
 #include <stdbool.h>
+#include "MDR1986VE3.h"
 #include "lan-config.h"
 
 /**
@@ -62,17 +63,11 @@ extern "C" {
 | (( uint16_t )( x ) & 0xFF00 ) >> 8 \
 )
 
-#define SWAP32( x ) ( \
-  (( uint32_t )( x ) & 0x000000FF ) << 24 \
-| (( uint32_t )( x ) & 0x0000FF00 ) << 8  \
-| (( uint32_t )( x ) & 0x00FF0000 ) >> 8  \
-| (( uint32_t )( x ) & 0xFF000000 ) >> 24 \
-)
+#define HTONS  SWAP16
+#define NTOHS  SWAP16
 
-#define htons  SWAP16
-#define htonl  SWAP32
-#define ntohs  SWAP16
-#define ntohl  SWAP32
+#define htons( x )  (( uint16_t )__REV16( x ))
+#define ntohs( x )  htons( x )
 
 /**
  *  \brief IP address type.
@@ -86,8 +81,8 @@ typedef uint32_t ip_addr_t;
 | (( ip_addr_t )( d ) << 24 ) \
 )
 
-#define ETH_TYPE_IP   htons( 0x0800 )
-#define ETH_TYPE_ARP  htons( 0x0806 )
+#define ETH_TYPE_IP   HTONS( 0x0800 )
+#define ETH_TYPE_ARP  HTONS( 0x0806 )
 
 /**
  *  \brief Type of Ethernet frame header.
@@ -100,10 +95,10 @@ typedef struct {
 } __attribute__((packed)) eth_frame_t;
 
 
-#define ARP_HW_TYPE_ETH   htons( 0x0001 )
-#define ARP_PROT_TYPE_IP  htons( 0x0800 )
-#define ARP_OPER_REQUEST  htons( 1 )
-#define ARP_OPER_REPLY    htons( 2 )
+#define ARP_HW_TYPE_ETH   HTONS( 0x0001 )
+#define ARP_PROT_TYPE_IP  HTONS( 0x0800 )
+#define ARP_OPER_REQUEST  HTONS( 1 )
+#define ARP_OPER_REPLY    HTONS( 2 )
 
 /**
  *  \brief Type of ARP header.

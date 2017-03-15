@@ -308,7 +308,7 @@ static void ip_handle( int ifc, ip_packet_t *p, uint16_t sz )
 				  , p->data, len )
 				);
 				if ( chsum != calc ) {
-					LAN_DEBUGF( "%s: RX ERROR: Wrong IP packet checksum.\n", ETHS[ ifc ]);
+					LAN_DEBUGF( "%s: RX ERROR: Wrong UDP packet checksum.\n", ETHS[ ifc ]);
 					lan_errno = LAN_ERR_UDP_CHECKSUM;
 					/* Ignore */
 					return;

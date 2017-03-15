@@ -12,7 +12,7 @@
 #ifndef ETHERNET_H
 #define ETHERNET_H
 
-#include <inttypes.h>
+#include <stdint.h>
 #include <stdbool.h>
 #include "lan-config.h"
 
