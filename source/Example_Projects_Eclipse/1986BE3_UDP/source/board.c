@@ -101,15 +101,16 @@ void Timer1Init(void)
 
 void Timer1_IRQHandler()
 {
-	static int t = 0;
+	static uint32_t t = 0;
 
 	MDR_TIMER1->STATUS = 0;
-	if(++t == 5){
-		PORT_ResetBits(LED_PORT, LED_PIN);
-	}else if(t == 10){
-		t = 0;
+	if(++t % 10 == 0){
 		timer1_flag = 1;
-		PORT_SetBits(LED_PORT, LED_PIN);
+		if(t % 1000 == 0){
+			PORT_ResetBits(LED_PORT, LED_PIN);
+		}else if(t % 500 == 0){
+			PORT_SetBits(LED_PORT, LED_PIN);
+		}
 	}
 }
 

@@ -10,6 +10,7 @@
  */
 
 #include <string.h>
+#include <stdlib.h>
 #include "MDR32F9Qx_config.h"
 #include "board.h"
 #include "ethernet.h"
@@ -153,8 +154,8 @@ int main( void )
 			/* Show state */
 			if (( ++showtime % 1000 ) == 0 ) {  /* ... every 10 sec */
 				printf( "TX eth1 = %lu, eth2 = %lu\n", tx_count[ eth1 ], tx_count[ eth2 ]);
+				printf( "RX eth1 = %lu, eth2 = %lu\n", rx_count[ eth1 ], rx_count[ eth2 ]);
 				if ( err_count[ eth1 ] + err_count[ eth2 ] > err_total ) {
-					printf( "RX eth1 = %lu, eth2 = %lu\n", rx_count[ eth1 ], rx_count[ eth2 ]);
 					printf( "ERROR eth1 = %lu, eth2 = %lu\n", err_count[ eth1 ], err_count[ eth2 ]);
 					err_total = err_count[ eth1 ] + err_count[ eth2 ];
 				}
