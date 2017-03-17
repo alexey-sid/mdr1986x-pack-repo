@@ -37,6 +37,7 @@ static uint32_t err_count[ eth__COUNT_ ] = { 0, 0 };
 static uint32_t err_total = 0;
 static uint32_t next_packno[ eth__COUNT_ ] = { 0, 0 };
 static uint32_t lost[ eth__COUNT_ ] = { 0, 0 };
+static uint32_t nping[ eth__COUNT_ ] = { 0, 0 };
 
 #define PAYLOAD_SIZE  1024
 
@@ -164,6 +165,11 @@ int main( void )
 					lost[ eth1 ] = 0;
 					lost[ eth2 ] = 0;
 				}
+				if ( nping[ eth1 ] || nping[ eth2 ]) {
+					printf( "NPING (within 10 sec) eth1 = %lu, eth2 = %lu\n", nping[ eth1 ], nping[ eth2 ]);
+					nping[ eth1 ] = 0;
+					nping[ eth2 ] = 0;
+				}
 			}
 			timer1_flag = 0;
 		}
@@ -175,6 +181,10 @@ void udp_handle_data( int ifc, uint16_t s_port, uint16_t t_port, ip_addr_t s_ip,
 	uint32_t packno;
 	int s_ifc = ( ifc == eth1 ) ? eth2 : eth1;  /* Sender interface */
 
+	if ( t_port == UDP_T_PORT + 1 ) {
+		++nping[ ifc ];
+		return;
+	}
 	if ( t_port != UDP_T_PORT ) return;
 
 	/* Check payload size */
