@@ -3,7 +3,7 @@
     | |\/| |  )| | )  / |( ( )( ( ) / /   \ \_/
     |_|  |_|_/ |_| \__|_| /_/ (_(_)(_)_)__/_/ \
  *//**
- *  \file  lan_config.h
+ *  \file  lan-config.h
  *  \brief  Config for 1986BE3_UDP.
  *  \author  Vitaly Kravtsov (in4lio@gmail.com)
  *  \copyright  See the LICENSE file.
