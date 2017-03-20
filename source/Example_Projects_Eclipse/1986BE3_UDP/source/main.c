@@ -28,6 +28,7 @@
 
 #define UDP_S_PORT     18332  /* Sender port */
 #define UDP_T_PORT     18333  /* Target port */
+#define UDP_N_PORT     18334  /* Nping port */
 
 static const ip_addr_t IP_ADDR[ eth__COUNT_ ] = { IP_ADDR_1, IP_ADDR_2 };
 
@@ -181,8 +182,8 @@ void udp_handle_data( int ifc, uint16_t s_port, uint16_t t_port, ip_addr_t s_ip,
 	uint32_t packno;
 	int s_ifc = ( ifc == eth1 ) ? eth2 : eth1;  /* Sender interface */
 
-	if ( t_port == UDP_T_PORT + 1 ) {
-		++nping[ ifc ];
+	if ( t_port == UDP_N_PORT ) {
+		++nping[ ifc ];  /* Count Nping datagrams */
 		return;
 	}
 	if ( t_port != UDP_T_PORT ) return;

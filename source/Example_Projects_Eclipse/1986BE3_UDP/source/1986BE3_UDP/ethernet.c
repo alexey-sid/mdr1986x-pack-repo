@@ -33,14 +33,14 @@ uint32_t ethernet_errpool = 0;
 #define MDR_ETHERNET2_RX_FIFO     (( void *)( MDR_ETHERNET2_BUF_BASE ))
 #define MDR_ETHERNET2_TX_FIFO     (( void *)( MDR_ETHERNET2_BUF_BASE + 4 ))
 
-static void *MDR_ETHERNET_RX_FIFO[] = { MDR_ETHERNET1_RX_FIFO, MDR_ETHERNET2_RX_FIFO };
-static void *MDR_ETHERNET_TX_FIFO[] = { MDR_ETHERNET1_TX_FIFO, MDR_ETHERNET2_TX_FIFO };
+static void *MDR_ETHERNET_RX_FIFO[ eth__COUNT_ ] = { MDR_ETHERNET1_RX_FIFO, MDR_ETHERNET2_RX_FIFO };
+static void *MDR_ETHERNET_TX_FIFO[ eth__COUNT_ ] = { MDR_ETHERNET1_TX_FIFO, MDR_ETHERNET2_TX_FIFO };
 
-static MDR_ETHERNET_TypeDef *MDR_ETHERNET[] = { MDR_ETHERNET1, MDR_ETHERNET2 };
+static MDR_ETHERNET_TypeDef *MDR_ETHERNET[ eth__COUNT_ ] = { MDR_ETHERNET1, MDR_ETHERNET2 };
 
 #define _REPEAT( N ) for ( int _REPEAT_i = 0; _REPEAT_i < ( N ); _REPEAT_i++ )
 
-const char const *ETHS[] = { "eth1", "eth2" };
+const char const *ETHS[ eth__COUNT_ ] = { "eth1", "eth2" };
 
 static void ethernet_configure( int ifc, mac_addr_t mac )
 {

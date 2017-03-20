@@ -33,7 +33,7 @@ extern "C" {
  */
 enum { eth1, eth2, eth__COUNT_ };
 
-extern const char const *ETHS[];
+extern const char const *ETHS[ eth__COUNT_ ];
 
 /**
  *  \brief MAC address type.
