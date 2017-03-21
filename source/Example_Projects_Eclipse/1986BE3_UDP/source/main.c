@@ -10,6 +10,7 @@
  */
 
 #include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "MDR32F9Qx_config.h"
 #include "board.h"

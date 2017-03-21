@@ -14,7 +14,6 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "lan-config.h"
 
 /**
  *  \addtogroup lan

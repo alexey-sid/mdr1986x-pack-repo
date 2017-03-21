@@ -12,6 +12,7 @@
 #include <string.h>
 #include "MDR1986VE3.h"
 #include "ethernet.h"
+#include "lan-config.h"
 
 /**
  *  \addtogroup lan
