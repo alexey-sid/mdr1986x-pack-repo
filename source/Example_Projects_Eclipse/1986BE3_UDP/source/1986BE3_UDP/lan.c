@@ -512,7 +512,37 @@ void udp_transmit( int ifc, uint16_t s_port, uint16_t t_port, ip_addr_t t_ip, ui
 	p->chsum = wrapsum( checksum( 0, ( void *) p, sizeof( ip_packet_t )));
 
 	eth_transmit( ifc, arp_cache[ arp_cache_inx ].mac, ETH_TYPE_IP, sz );
-	return;
+}
+
+void udp_reply( int ifc, uint16_t sz )
+{
+	lan_errno = LAN_ERR_NONE;
+	assert_eth( ifc );
+
+	ip_packet_t *p = ( void *)((( eth_frame_t *) frame_buffer )->data );
+	udp_packet_t *udp = ( void *)( p->data );
+
+	if ( sz <= UDP_PAYLOAD_LIMIT ) {
+		uint16_t s_port = udp->s_port;
+		udp->s_port = udp->t_port;
+		udp->t_port = s_port;
+
+		sz += sizeof( udp_packet_t );
+		udp->len = htons( sz );
+		udp->chsum = 0;
+		udp->chsum = wrapsum(  /* Calculate checksum, including pseudo header, UDP header and data */
+		  checksum(
+		    checksum(
+		      ( uint32_t ) sz + IP_PROT_UDP
+		    , ( uint8_t *) &p->s_ip, 2 * sizeof( ip_addr_t ))
+		  , p->data, sz )
+		);
+		ip_reply( ifc, sz );
+	} else {
+		/* Too long data */
+		LAN_DEBUGF( "%s: TX ERROR: Too long payload (%u).\n", ETHS[ ifc ], sz );
+		lan_errno = LAN_ERR_TOO_LONG_PAYLOAD;
+	}
 }
 
 /** \} */

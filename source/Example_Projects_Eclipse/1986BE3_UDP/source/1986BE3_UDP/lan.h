@@ -157,6 +157,16 @@ bool lan_able_transmit( int ifc );
 void udp_transmit( int ifc, uint16_t s_port, uint16_t t_port, ip_addr_t t_ip, uint8_t *data, uint16_t sz );
 
 /**
+ *  \brief Reply with UDP packet.
+ *
+ *  Check the result of this operation in lan_erron variable, see udp_transmit.
+ *
+ *  \param ifc Interface ID.
+ *  \param sz Payload size.
+ */
+void udp_reply( int ifc, uint16_t sz );
+
+/**
  *  \brief Send ARP packet.
  *  \param ifc Interface ID.
  *  \param t_ip Target IP address.
