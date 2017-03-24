@@ -52,6 +52,7 @@ void DebugUARTInit(void)
 	RST_CLK_PCLKcmd((RST_CLK_PCLK_PORTF | RST_CLK_PCLK_UART2), ENABLE);
 #endif
 	/* Port Init Structure */
+	PORT_StructInit(&PORT_InitStructure);
 	PORT_InitStructure.PORT_Pin = DEBUG_UART_TX_PIN | DEBUG_UART_RX_PIN;
 	PORT_InitStructure.PORT_FUNC = DEBUG_UART_PINS_FUNCTION;
 	PORT_InitStructure.PORT_MODE = PORT_MODE_DIGITAL;
@@ -79,6 +80,7 @@ void DebugUARTInit(void)
 void LEDInit(void)
 {
 	MDR_RST_CLK->PER_CLOCK |= LED_PORT_PCLK;
+	PORT_StructInit(&PORT_InitStructure);
 	PORT_InitStructure.PORT_Pin = LED_PIN;
 	PORT_InitStructure.PORT_OE = PORT_OE_OUT;
 	PORT_InitStructure.PORT_FUNC = PORT_FUNC_PORT;
