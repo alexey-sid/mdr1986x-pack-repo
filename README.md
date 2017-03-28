@@ -46,6 +46,7 @@ value: <path to packages>
 - [Milandr MCU 1986x Standard Peripherals Library Documentation](https://github.com/eldarkg/emdr1986x-std-per-lib-doc)
 - [Milandr MCU 1986BExx CMSIS Driver](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/CMSIS_Driver)
 - [Milandr MCU 1986x flashing with J-Link](https://github.com/in4lio/mdr1986x-JFlash)
+- [Milandr MCU 1986BE3T UDP Library](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/Example_Projects_Eclipse/1986BE3_UDP)
 - [Example Projects for GNU ARM Eclipse](https://github.com/in4lio/mdr1986x-pack-repo/tree/master/source/Example_Projects_Eclipse)
 
 #### How to rebuild the package
