@@ -332,8 +332,6 @@ static void arp_handle( int ifc, arp_packet_t *p, uint16_t sz )
 	}
 }
 
-#ifdef LINK_LAN_PING
-
 static void ip_reply( int ifc, uint16_t sz )
 {
 	ip_packet_t *p = ( void *)((( eth_frame_t *) frame_buffer )->data );
@@ -347,6 +345,8 @@ static void ip_reply( int ifc, uint16_t sz )
 	eth_reply( ifc, sz );
 }
 
+#ifdef LINK_LAN_PING
+
 static void icmp_handle( int ifc, icmp_echo_packet_t *p, uint16_t sz )
 {
 	if (( sz >= sizeof( icmp_echo_packet_t )) && ( p->type == ICMP_TYPE_ECHO_REQ )) {
@@ -358,7 +358,7 @@ static void icmp_handle( int ifc, icmp_echo_packet_t *p, uint16_t sz )
 		ip_reply( ifc, sz );
 	}
 }
-#endif
+#endif /* LINK_LAN_PING */
 
 static void ip_handle( int ifc, ip_packet_t *p, uint16_t sz )
 {
