@@ -44,7 +44,9 @@ dellist = (
     'IDE/keil/SFD/MDR1901VC1T.SFR',
     'IDE/keil/SFD/MDR1901VC1T.svd',
     'JFlash/.git',
+    '@Example_Projects_Eclipse/.gitignore',
     '@Example_Projects_Eclipse/mdr1986x_RTT/.gitignore',
+    '@Example_Projects_Eclipse/1986BE3_UDP/.gitignore',
 )
 
 print 'Clean build'
@@ -94,7 +96,8 @@ for op in dellist:
         f = os.path.join( BUILD_DIR, op[ 1: ])
         d = os.path.dirname( f )
         try:
-            sublist = [ os.path.join( d, x[ 1: ]) if x.startswith( '/' ) else os.path.join( d, x ) for x in open( f ).read().splitlines()]
+            sublist = open( f ).read().splitlines()
+            sublist = [ os.path.join( d, x[ 1: ]) if x.startswith( '/' ) else os.path.join( d, x ) for x in sublist if x.strip()]
         except IOError:
             sublist = []
             print '*** ERROR *** Failed to get a removal list from "%s".' % ( f )
