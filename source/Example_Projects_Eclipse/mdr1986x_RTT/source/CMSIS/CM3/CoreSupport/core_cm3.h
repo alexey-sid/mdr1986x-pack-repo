@@ -1495,7 +1495,7 @@ __STATIC_INLINE void NVIC_DecodePriority (uint32_t Priority, uint32_t PriorityGr
 
     The function initiates a system reset request to reset the MCU.
  */
-__STATIC_INLINE void NVIC_SystemReset(void)
+__attribute__( ( always_inline ) ) __STATIC_INLINE void NVIC_SystemReset(void)
 {
   __DSB();                                                     /* Ensure all outstanding memory accesses included
                                                                   buffered write are completed before reset */
