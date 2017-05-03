@@ -33,7 +33,7 @@ value: <path to packages>
 
 #### Supported MCUs
 
-[Milandr 32-bit АRМ Cortex-М microcontrollers](http://milandr.ru/en/index.php?mact=Products,cntnt01,default,0&cntnt01hierarchyid=5&cntnt01returnid=141)
+[Milandr 32-bit АRМ Cortex-М microcontrollers](http://ic.milandr.ru/products/mikrokontrollery_i_protsessory/32_razryadnye_mikrokontrollery/)
 
 - 1986BE9x (MDR32F9Qx)
 - 1986BE1 (MDR32F1)
