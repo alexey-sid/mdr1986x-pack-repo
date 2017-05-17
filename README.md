@@ -6,26 +6,26 @@ The package that is maintained here – [`Milandr.MDR1986BExx.1.4.2.pack`](https
 #### How to install the package (Eclipse)
 
 - [Add](http://gnuarmeclipse.github.io/plugins/packs-manager/#configuration) Milandr MCU repository,
-specifying the path to [`index.idx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx) file:
+specifying the path to the [`index.idx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx) file:
 ```
 Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories → Add...
 
-Type: CMSIS Pack
-Name: Milandr
-URL:  https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx
+Type       CMSIS Pack
+Name       Milandr
+URL        https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx
 ```
 
-- [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) Packs perspective
-and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install) `Milandr.MDR1986BExx` package.
+- [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) the Packs perspective
+and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install) the `MDR1986BExx` package
+from the `Milandr` group.
 
 - The path to packages is defined in `packs_path` macro, but for the plug-in version that I use,
-this macro isn't visible from tools configurations. Therefore, you may need to set `packs_path` macro manually,
-here:
+this macro is not visible from tools configurations. Therefore, you may need to set the `packs_path` macro manually:
 ```
 Eclipse Menu → Window → Preferences → Run/Debug → String Substitution → New...
 
-Variable: packs_path
-Value: <path to packages>
+Name       packs_path
+Value      <path to packages>
 ```
 
 #### How to examine/modify the peripheral registers (Eclipse)
@@ -52,7 +52,7 @@ Value: <path to packages>
 
 #### How to rebuild the package
 
-- Clone this repository and its submodules, if weren't cloned yet:
+- Clone this repository and its submodules, if they were not cloned yet:
 
 ```
 git clone https://github.com/in4lio/mdr1986x-pack-repo.git
@@ -60,7 +60,7 @@ cd mdr1986x-pack-repo
 git submodule update --init --recursive
 ```
 
-- Update this repository and submodules, if weren't cloned just now:
+- Update this repository and submodules, if they were not cloned just now:
 
 ```
 cd mdr1986x-pack-repo
