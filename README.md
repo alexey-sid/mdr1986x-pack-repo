@@ -1,11 +1,12 @@
 # Milandr MCU 1986x CMSIS Pack Repository
 
 The unofficial repository for [GNU ARM Eclipse](http://gnuarmeclipse.github.io/plugins/packs-manager/).<br>
-The contained package also compatible with Keil MDK 5.
+The package that is maintained here – [`Milandr.MDR1986BExx.1.4.2.pack`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/Milandr.MDR1986BExx.1.4.2.pack) also compatible with Keil MDK 5.
 
 #### How to install the package (Eclipse)
 
-- [Add](http://gnuarmeclipse.github.io/plugins/packs-manager/#configuration) Milandr MCU repository:
+- [Add](http://gnuarmeclipse.github.io/plugins/packs-manager/#configuration) Milandr MCU repository,
+specifying the path to [`index.idx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx) file:
 ```
 Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories → Add...
 
@@ -23,8 +24,8 @@ here:
 ```
 Eclipse Menu → Window → Preferences → Run/Debug → String Substitution → New...
 
-variable: packs_path
-value: <path to packages>
+Variable: packs_path
+Value: <path to packages>
 ```
 
 #### How to examine/modify the peripheral registers (Eclipse)
