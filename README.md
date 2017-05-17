@@ -9,9 +9,9 @@ The contained package also compatible with Keil MDK 5.
 ```
 Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories → Add...
 
-type: CMSIS Pack
-name: Milandr
-url:  https://github.com/in4lio/mdr1986x-pack-repo/raw/master/Milandr.idx
+Type: CMSIS Pack
+Name: Milandr
+URL:  https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx
 ```
 
 - [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) Packs perspective
