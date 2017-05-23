@@ -7,7 +7,7 @@
 
   <releases>
     <release version="1.4.2">
-      20170407-0003, Updated mdr1986x-JFlash
+      20170523-0004, Updated emdr1986x-std-per-lib
     </release>
     <release version="1.4.1">
       20160208-0000, Initial release, based on https://github.com/eldarkg/emdr1986x-std-per-lib and https://github.com/eldarkg/emdr1986x-std-per-lib-doc
