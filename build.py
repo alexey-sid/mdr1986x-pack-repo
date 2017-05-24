@@ -18,7 +18,7 @@ SOURCE_DIR = './source/'
 BUILD_DIR  = './build/'
 PDSC_FILE  = './Milandr.MDR1986BExx.pdsc'
 PACK_TEMPL = './Milandr.MDR1986BExx.%s.pack'
-IDX_FILE   = './index.idx'
+IDX_FILE   = './index.pidx'
 
 copylist = (
     ( 'emdr1986x-std-per-lib/CMSIS/'                      , 'Libraries/CMSIS/' ),
