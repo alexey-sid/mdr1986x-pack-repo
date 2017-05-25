@@ -15,6 +15,8 @@ Type       CMSIS Pack
 Name       Milandr
 URL        https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.pidx
 ```
+  For old versions of Packs Manager you should use
+  [`index.idx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx) file.
 
 - [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) the Packs perspective
 and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install) the `MDR1986BExx` package
