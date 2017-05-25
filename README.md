@@ -6,13 +6,14 @@ The package that is maintained here – [`Milandr.MDR1986BExx.1.4.2.pack`](https
 #### How to install the package (Eclipse)
 
 - [Add](http://gnuarmeclipse.github.io/plugins/packs-manager/#configuration) Milandr MCU repository,
-specifying the path to the [`index.idx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx) file:
+specifying the path to
+the [`index.pidx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.pidx) file:
 ```
 Eclipse Menu → Window → Preferences → C/C++ → Packages → Repositories → Add...
 
 Type       CMSIS Pack
 Name       Milandr
-URL        https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx
+URL        https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.pidx
 ```
 
 - [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) the Packs perspective
