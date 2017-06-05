@@ -1,6 +1,6 @@
 # Milandr MCU 1986x CMSIS Pack Repository
 
-The unofficial repository for [GNU ARM Eclipse](http://gnuarmeclipse.github.io/plugins/packs-manager/).<br>
+It's an unofficial repository for [GNU ARM Eclipse](http://gnuarmeclipse.github.io/plugins/packs-manager/).<br>
 The package that is maintained here – [`Milandr.MDR1986BExx.1.4.2.pack`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/Milandr.MDR1986BExx.1.4.2.pack) also compatible with Keil MDK 5.
 
 #### How to install the package (Eclipse)
@@ -15,14 +15,14 @@ Type       CMSIS Pack
 Name       Milandr
 URL        https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.pidx
 ```
-  For old versions of Packs Manager you should use
+  For the old versions of Packs Manager you should use
   [`index.idx`](https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/index.idx) file.
 
 - [Open](http://gnuarmeclipse.github.io/plugins/packs-manager/#the-packs-perspective) the Packs perspective
 and [install](http://gnuarmeclipse.github.io/plugins/packs-manager/#pack-install) the `MDR1986BExx` package
 from the `Milandr` group.
 
-- The path to packages is defined in `packs_path` macro, but for the plug-in version that I use,
+- The path to the packages is defined in the `packs_path` macro, but for the plug-in version that I use,
 this macro is not visible from tools configurations. Therefore, you may need to set the `packs_path` macro manually:
 ```
 Eclipse Menu → Window → Preferences → Run/Debug → String Substitution → New...
@@ -55,7 +55,7 @@ Value      <path to packages>
 
 #### How to rebuild the package
 
-- Clone this repository and its submodules, if they were not cloned yet:
+- Clone this repository and its submodules if they are not cloned yet:
 
 ```
 git clone https://github.com/in4lio/mdr1986x-pack-repo.git
@@ -63,7 +63,7 @@ cd mdr1986x-pack-repo
 git submodule update --init --recursive
 ```
 
-- Update this repository and submodules, if they were not cloned just now:
+- Update this repository and submodules if they are not cloned just now:
 
 ```
 cd mdr1986x-pack-repo
