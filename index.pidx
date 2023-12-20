@@ -1,8 +1,8 @@
 <?xml version="1.0" ?><index schemaVersion="1.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PackIndex.xsd">
-<vendor>Milandr</vendor>
-<url>http://milandr.ru/</url>
-<timestamp>2017-05-24T00:00:00.0000000+00:00</timestamp>
-<pindex>
-<pdsc name="MDR1986BExx" url="https://raw.githubusercontent.com/in4lio/mdr1986x-pack-repo/master/" vendor="Milandr" version="1.4.2"/>
-</pindex>
+    <vendor>Milandr</vendor>
+    <url>http://milandr.ru/</url>
+    <timestamp>2017-05-24T00:00:00.0000000+00:00</timestamp>
+    <pindex>
+        <pdsc name="MDR1986BExx" url="https://raw.githubusercontent.com/alexey-sid/mdr1986x-pack-repo/master/" vendor="Milandr" version="1.4.2"/>
+    </pindex>
 </index>
